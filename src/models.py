@@ -37,6 +37,8 @@ class Sale(BaseModel):
     car_vin: str
     sales_date: datetime
     cost: Decimal
+    # Добавим поле, чтобы помечать удаленные строки.
+    is_deleted: bool = False
 
     def index(self) -> str:
         return self.car_vin
